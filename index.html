@@ -5,7 +5,7 @@
     <title>Gamedev Canvas Workshop</title>
     <style>
     	* { padding: 0; margin: 0; }
-    	canvas { background: #fff; display: block; margin: 0 auto; }
+    	canvas { background: #000; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -82,7 +82,7 @@
             b.status = 0;
             score++;
             if(score == brickRowCount*brickColumnCount) {
-              alert("YOU WIN, Nick CONGRATS!");
+              alert("YOU WIN, CONGRATS!");
               document.location.reload();
             }
           }
@@ -94,14 +94,16 @@
   function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "White";
     ctx.fill();
     ctx.closePath();
   }
+
+
   function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#White";
     ctx.fill();
     ctx.closePath();
   }
@@ -115,7 +117,7 @@
           bricks[c][r].y = brickY;
           ctx.beginPath();
           ctx.rect(brickX, brickY, brickWidth, brickHeight);
-          ctx.fillStyle = "red";
+          ctx.fillStyle = "White";
           ctx.fill();
           ctx.closePath();
         }
@@ -124,12 +126,12 @@
   }
   function drawScore() {
     ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "White";
     ctx.fillText("Score: "+score, 8, 20);
   }
   function drawLives() {
     ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "White";
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);
   }
 
