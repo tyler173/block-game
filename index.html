@@ -5,7 +5,7 @@
     <title>Gamedev Canvas Workshop</title>
     <style>
     	* { padding: 0; margin: 0; }
-    	canvas { background: #000; display: block; margin: 0 auto; }
+    	canvas { background: #000; display: block; margin: 0 auto; border-bottom-color: #000; }
     </style>
 </head>
 <body>
@@ -16,7 +16,7 @@
 <br / />
 <canvas id="myCanvas" width="800" height="600"></canvas>
 <br />
-<h2><center> You only see the shadow</center></h2>
+<h2><center> You only see the shadow </center></h2>
 
 <script>
 
@@ -188,7 +188,7 @@
         }
         else {
           x = canvas.width/2;
-          y = canvas.height-30;
+          y = canvas.height-15;
           paddleX = (canvas.width-paddleWidth)/2;
         }
       }
